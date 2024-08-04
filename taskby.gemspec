@@ -36,4 +36,5 @@ Gem::Specification.new do |spec|
   spec.required_rubygems_version = ">= 1.3.5"
 
   spec.add_dependency "thor", "~> 1.3.0"
+  spec.add_dependency "xdg", "~> 8.5"
 end
