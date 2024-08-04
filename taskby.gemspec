@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.licenses = %w[MIT]
   spec.authors = ["Nathan Kidd"]
   spec.homepage = "https://github.com/n-at-han-k/taskby"
-  spec.description = "CLI program that extends taskwarrior with useful tools"
+  spec.description = "Extending taskwarrior with useful tools."
   spec.summary = spec.description
 
   spec.metadata = {

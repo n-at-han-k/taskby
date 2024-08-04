@@ -14,3 +14,5 @@
 [gh_actions_ci]: https://github.com/n-at-han-k/taskby/actions/workflows/ci.yml
 [codeclimate]: https://codeclimate.com/github/n-at-han-k/taskby
 [coverage]: https://coveralls.io/github/n-at-han-k/taskby
+
+> Extending taskwarrior with useful tools.
