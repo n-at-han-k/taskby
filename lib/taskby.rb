@@ -1,4 +1,7 @@
-require 'thor'
+# frozen_string_literal: true
+
+require "thor"
+require "xdg"
 
 class Taskby
   module Helpers
@@ -11,14 +14,14 @@ class Taskby
 
     def yes_no(condition)
       if condition
-        say('Yes', :green)
+        say("Yes", :green)
       else
-        say('No', :red)
+        say("No", :red)
       end
     end
   end
 end
 
-require 'taskby/cli'
-require 'taskby/version'
-require 'taskby/doctor'
+require "taskby/cli"
+require "taskby/version"
+require "taskby/doctor"

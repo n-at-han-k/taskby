@@ -1,28 +1,32 @@
+# frozen_string_literal: true
+
 class Taskby::Cli < Thor
   include Taskby::Helpers
   package_name "Taskby"
 
-  # By default, Thor returns exit(0) when an error occurs.
-  # See: https://github.com/rails/thor/issues/244
-  def self.exit_on_failure?
-    true
+  class << self
+    # By default, Thor returns exit(0) when an error occurs.
+    # See: https://github.com/rails/thor/issues/244
+    def exit_on_failure?
+      true
+    end
+
+    # Method here just in-case we want to do something before Thor starts
+    def call(args)
+      start(args)
+    end
   end
 
-  # Method here just in-case we want to do something before Thor starts
-  def self.call(args)
-    self.start(args)
-  end
-
-  desc 'version', 'Display the version of taskby installed'
-  map '-v' => :version
+  desc "version", "Display the version of taskby installed"
+  map "-v" => :version
   def version
     say "taskby #{Taskby::VERSION}"
   end
 
 
-  desc 'doctor', 'Make sure taskby is ready to run'
+  desc "doctor", "Make sure taskby is ready to run"
   def doctor
-    say 'Checking if taskwarrior is installed ==> '
+    say "Checking if taskwarrior is installed ==> "
     yes_no Taskby::Doctor.taskwarrior_installed?
   end
 

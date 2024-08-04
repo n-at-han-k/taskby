@@ -1,24 +1,26 @@
-# coding: utf-8
+# frozen_string_literal: true
+
 lib = File.expand_path("../lib/", __FILE__)
 $LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
 require "taskby/version"
 
 Gem::Specification.new do |spec|
-  spec.name = 'taskby'
+  spec.name = "taskby"
   spec.version = Taskby::VERSION
-  spec.licenses = %w(MIT)
-  spec.authors = ['Nathan Kidd']
-  spec.homepage = 'https://github.com/n-at-han-k/taskby'
-  spec.description = 'This is a CLI program that extends taskwarrior with usefull tools'
+  spec.licenses = %w[MIT]
+  spec.authors = ["Nathan Kidd"]
+  spec.homepage = "https://github.com/n-at-han-k/taskby"
+  spec.description = "CLI program that extends taskwarrior with useful tools"
   spec.summary = spec.description
 
   spec.metadata = {
-    'bug_tracker_uri' => 'https://github.com/n-at-han-k/taskby/issues'
+    "bug_tracker_uri" => "https://github.com/n-at-han-k/taskby/issues",
+    "rubygems_mfa_required" => "true"
   }
 
-  spec.files = %w(taskby.gemspec) + Dir["*.md", "bin/*", "lib/**/*.rb"]
-  spec.executables = %w(taskby)
-  spec.require_paths = %w(lib)
+  spec.files = %w[taskby.gemspec] + Dir["*.md", "bin/*", "lib/**/*.rb"]
+  spec.executables = %w[taskby]
+  spec.require_paths = %w[lib]
   spec.post_install_message = %q{
     __________________________________________________________
     ..........................................................
