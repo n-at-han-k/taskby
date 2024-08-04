@@ -1,3 +1,10 @@
+PATH
+  remote: .
+  specs:
+    taskby (0.1.0)
+      thor (~> 1.3.0)
+      xdg (~> 8.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -89,8 +96,7 @@ DEPENDENCIES
   rspec (~> 3.13)
   rubocop (~> 1.65)
   simplecov (~> 0.22.0)
-  thor (~> 1.3)
-  xdg (~> 8.5)
+  taskby!
 
 BUNDLED WITH
    2.5.11
